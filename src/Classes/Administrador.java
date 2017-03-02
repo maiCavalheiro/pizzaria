@@ -9,8 +9,8 @@ package Classes;
  *
  * @author igor
  */
-public class Funcionario {
+public class Administrador {
     private String login;
     private String senha;
-    public int expediente;
+        
 }

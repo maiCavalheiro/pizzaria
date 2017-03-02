@@ -10,5 +10,9 @@ package Classes;
  * @author igor
  */
 public class Pessoa {
-    
+    private String nome;
+    private int cpf;
+    private int telefone;
+    private int idade;
+    private String endereco;
 }

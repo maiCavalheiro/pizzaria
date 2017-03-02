@@ -358,7 +358,7 @@ public final class FormularioPedido extends javax.swing.JFrame {
         v.add(tamanho);
         v.add(bebidas);
         v.add(conteudo);
-        v.add(soma);
+        //v.add(soma);
 
         pedidos.addRow(v);
 

@@ -10,5 +10,8 @@ package Classes;
  * @author igor
  */
 public class Caixa {
-    
+    public int valorInicial;
+    public int valorFinal;
+    public int horaAbertura;
+    public int horaFechamento;
 }
