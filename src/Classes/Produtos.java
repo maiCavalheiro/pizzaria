@@ -10,6 +10,6 @@ package Classes;
  * @author igor
  */
 public class Produtos {
-    private String nome;
+       
     
 }

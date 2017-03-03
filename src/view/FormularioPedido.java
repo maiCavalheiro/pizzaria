@@ -308,7 +308,7 @@ public final class FormularioPedido extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBoxEntregaActionPerformed
 
     private void jBinserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBinserirActionPerformed
-       String pizza;
+       String pizza = null;
        String bebida;
         
         if(jTextFieldPreçoP.getText().isEmpty()){
@@ -328,7 +328,7 @@ public final class FormularioPedido extends javax.swing.JFrame {
         String conteudo = "";
         String tamanho = "";
         Float soma;
-        //String bebida = jTextFieldPrecoB.getText();
+        bebida = jTextFieldPrecoB.getText();
         String sabor = jCBsabores.getSelectedItem().toString();
         String bebidas = jCBbebidas.getSelectedItem().toString();
         boolean estado = jCheckBoxEntrega.isSelected();
@@ -336,7 +336,7 @@ public final class FormularioPedido extends javax.swing.JFrame {
         boolean m = media.isSelected();
         boolean p = pequena.isSelected();
 
-       // soma = Float.parseFloat(pizza) + Float.parseFloat(bebida);
+        soma = Float.parseFloat(pizza) + Float.parseFloat(bebida);
 
         if (g == true) {
             tamanho = grande.getText();
@@ -358,7 +358,7 @@ public final class FormularioPedido extends javax.swing.JFrame {
         v.add(tamanho);
         v.add(bebidas);
         v.add(conteudo);
-        //v.add(soma);
+        v.add(soma);
 
         pedidos.addRow(v);
 

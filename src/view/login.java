@@ -91,8 +91,7 @@ public class login extends javax.swing.JFrame {
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         String login = jTextFLogin.getText();
-        String pass;
-        pass = new String(senha.getPassword()).trim();
+        String pass = new String(senha.getPassword()).trim();
         
         //if(login.equals("funcionario") && pass.equals("funcionario1")){
         telaInicio inicio = new telaInicio();
