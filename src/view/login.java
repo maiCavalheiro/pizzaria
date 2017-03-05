@@ -36,6 +36,7 @@ public class login extends javax.swing.JFrame {
         fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextFLogin.addActionListener(new java.awt.event.ActionListener() {

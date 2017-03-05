@@ -5,6 +5,9 @@
  */
 package view;
 
+import Classes.Main;
+import Classes.Pedido;
+
 /**
  *
  * @author Maira
@@ -28,13 +31,22 @@ public class telaInicio extends javax.swing.JFrame {
     private void initComponents() {
 
         novoPedido = new javax.swing.JButton();
+        listarPedidos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu principal");
 
         novoPedido.setText("Novo Pedido");
         novoPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 novoPedidoActionPerformed(evt);
+            }
+        });
+
+        listarPedidos.setText("Listar Pedidos");
+        listarPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarPedidosActionPerformed(evt);
             }
         });
 
@@ -45,14 +57,18 @@ public class telaInicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(novoPedido)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(listarPedidos)
+                .addContainerGap(383, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(novoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(novoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(listarPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(681, 379));
@@ -60,10 +76,19 @@ public class telaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void novoPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoPedidoActionPerformed
-       FormularioPedido pedido =  new  FormularioPedido();
+       NovoPedido pedido =  new NovoPedido();
        pedido.setVisible(true);
        dispose();
     }//GEN-LAST:event_novoPedidoActionPerformed
+
+    private void listarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarPedidosActionPerformed
+        // ainda não implementado
+        System.out.println("Pedidos: ");
+        int index = 0;
+        for(Pedido p: Main.pedidos){
+            System.out.println("Pedido " + (index++) + " - Valor " + p.getPreco());
+        }
+    }//GEN-LAST:event_listarPedidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +126,7 @@ public class telaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton listarPedidos;
     private javax.swing.JButton novoPedido;
     // End of variables declaration//GEN-END:variables
 }
