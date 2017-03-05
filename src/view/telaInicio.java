@@ -82,12 +82,10 @@ public class telaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_novoPedidoActionPerformed
 
     private void listarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarPedidosActionPerformed
-        // ainda não implementado
-        System.out.println("Pedidos: ");
-        int index = 0;
-        for(Pedido p: Main.pedidos){
-            System.out.println("Pedido " + (index++) + " - Valor " + p.getPreco());
-        }
+
+            ListaPedidos lista = new ListaPedidos();
+            lista.setVisible(true);
+            dispose();
     }//GEN-LAST:event_listarPedidosActionPerformed
 
     /**
